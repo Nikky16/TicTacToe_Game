@@ -1,0 +1,209 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.nav ul{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(53, 1, 53);
+    color: white;
+}
+.nav ul li{
+    padding: 10px;
+    padding-left: 20px;
+    list-style: none;
+    font-size: 40px;
+}
+.game{
+    /* border: black 2px solid; */
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+}
+.gamepart{
+    /* border: blue 2px solid; */
+    width: 47vw;
+}
+.realgame{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-around;
+}
+.realgame .turn{
+    padding-right: 30px;
+}
+.realgame .line{
+    background-color: purple;
+    border-radius: 5px;
+    width: 0px;
+    height: 3px;
+    position: absolute;
+    transition: width 2s;
+}
+#line1{
+    top: 210px;
+}
+#line2{
+    top: 310px;
+}
+#line3{
+    top: 410px;
+}
+#line4{
+    top: 310px;
+    transform: rotate(90deg);
+}
+#line5{
+    top: 310px;
+    transform: rotate(90deg) translateY(-100px);
+}
+#line6{
+    top: 310px;
+    transform: rotate(90deg) translateY(100px);
+}
+#line7{
+    top: 310px;
+    transform: rotate(-45deg);
+}
+#line8{
+    top: 310px;
+    transform: rotate(45deg);
+}
+.display{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+}
+.display span{
+    color: rgb(53, 1, 53);
+}
+.box{
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box span{
+    font-size: 70px;
+}
+.box:hover{
+    background-color: rgb(253, 238, 253);
+}
+.bl-0{
+    border-left: none;
+}
+.br-0{
+    border-right: none;
+}
+.bt-0{
+    border-top: none;
+}
+.bb-0{
+    border-bottom: none;
+}
+.winner{
+    display: flex;
+    flex-direction: column;
+}
+.winner h1{
+    padding-left: 80px;
+}
+#happygif{
+    width: 0px;
+    transition: width 2s;
+}
+button{
+    margin-left: 50px;
+    width: 200px;
+    font-size: 20px;
+    padding: 10px;
+}
+button:hover{
+    background-color: rgb(253, 238, 253);
+    box-shadow: 3px 3px 1px rgb(53, 1, 53);
+}
+
+@media screen and (max-width: 700px) {
+    .game{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:auto;
+    }
+    .realgame .line{
+        top: 295px;
+    }
+}
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 17px;
+    }
+    .box span{
+        font-size: 20px;
+    }
+    .display{
+        display: grid;
+        grid-template-columns: repeat(3, 50px);
+        grid-template-rows: repeat(3, 50px);
+    }
+    .nav ul li{
+        font-size: 20px;
+    }
+    button{
+        font-size: 15px;
+        width: 100px;
+        margin-left: 0px;
+        padding: 0px;
+    }
+    .realgame{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .realgame .turn{
+        padding-right: 0px;
+    }
+    .winner h1{
+        padding-left: 0px;
+    }
+    .winner{
+        justify-content: center;
+        align-items: center;
+    }
+    .realgame .line{
+        top: 160px;
+        width: 0px;
+    }
+    #line1{
+        top: 110px;
+    }
+    #line2{
+        top: 160px;
+    }
+    #line3{
+        top: 210px;
+    }
+    #line4{
+        top: 160px;
+        transform: rotate(90deg);
+    }
+    #line5{
+        top: 160px;
+        transform: rotate(90deg) translateY(-50px);
+    }
+    #line6{
+        top: 160px;
+        transform: rotate(90deg) translateY(50px);
+    }
+    #line7{
+        top: 160px;
+        transform: rotate(-45deg);
+    }
+    #line8{
+        top: 160px;
+        transform: rotate(45deg);
+    }
+}
